@@ -15,12 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('nome');
-            $table->enum('tipo',
-            [
-                'corrente',
-                'poupança'
-            ]
-        );
+            $table->foreignId('tipo_id')->constrained('tipo_contas')->onDelete('cascade');     
             $table->decimal('saldo', 10, 2)->default(0);
             $table->string('descricao', 50)->nullable();
             $table->timestamps();

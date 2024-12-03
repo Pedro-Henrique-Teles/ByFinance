@@ -18,7 +18,7 @@ return new class extends Migration
             $table->boolean('confirmPagamento');
             $table->string('descricao', 30);
             $table->string('categoria', 25);
-            // criar coluna conta
+            $table->foreignId('conta_id')->constrained()->onDelete('cascade');
             // forma de pagamento
             $table->date('dataVencimento');
             $table->timestamps();

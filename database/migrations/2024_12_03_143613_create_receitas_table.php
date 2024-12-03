@@ -13,9 +13,15 @@ return new class extends Migration
     {
         Schema::create('receitas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');  // Definindo user_id e a chave estrangeira
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->decimal('valor', 10, 2);
+            $table->boolean('confirmPagamento');
+            $table->date('dataVencimento');
+            $table->string('categoria', 25);
+            //conta ou cartão
+            //forma de pagamento
             $table->string('descricao', 30);
+
             $table->timestamps();
         });
     }

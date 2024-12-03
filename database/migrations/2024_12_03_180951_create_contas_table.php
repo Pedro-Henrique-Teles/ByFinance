@@ -11,16 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('despesas', function (Blueprint $table) {
+        Schema::create('contas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->decimal('valor', 10, 2);
-            $table->boolean('confirmPagamento');
-            $table->string('descricao', 30);
-            $table->string('categoria', 25);
-            // criar coluna conta
-            // forma de pagamento
-            $table->date('dataVencimento');
+            $table->string('nome');
+            $table->enum('tipo',
+            [
+                'corrente',
+                'poupança'
+            ]
+        );
+            $table->decimal('saldo', 10, 2)->default(0);
+            $table->string('descricao', 50)->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('despesas');
+        Schema::dropIfExists('contas');
     }
 };

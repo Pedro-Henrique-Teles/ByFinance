@@ -4,6 +4,6 @@
 
 @section('content')
 
-<h1>Página de Receitas</h1>
+<h1>Página de Financeiro</h1>
 
 @endsection 

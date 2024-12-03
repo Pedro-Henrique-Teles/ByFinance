@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('cartoes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('nome', 10);
+            $table->foreignId('bandeira_id')->constrained('bandeiras')->onDelete('cascade');
+            $table->decimal('limite', 10, 2)->nullable();
+            $table->date('fechamento');
+            $table->date('vencimento');
             $table->timestamps();
         });
     }

@@ -13,7 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Seeder para registrar as bandeiras de cartões
+        $this->call(BandeiraSeeder::class);
 
         User::factory()->create([
             'name' => 'Test User',

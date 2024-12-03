@@ -6,6 +6,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/receitas', function() {
-    return view('receitas');
+Route::get('/financeiro', function() {
+    return view('financeiro');
 });

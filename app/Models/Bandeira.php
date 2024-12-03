@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Receita extends Model
+class Bandeira extends Model
 {
     //
 }

@@ -14,10 +14,20 @@ return new class extends Migration
         Schema::create('contas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('nome');
-            $table->foreignId('tipo_id')->constrained('tipo_contas')->onDelete('cascade');     
-            $table->decimal('saldo', 10, 2)->default(0);
-            $table->string('descricao', 50)->nullable();
+            $table->string('nome', 15);
+            $table->enum(
+                'tipo',
+                [
+                    'Corrente',
+                    'Poupança',
+                    'Salário',
+                    'Conjunta',
+                    'Universitaria',
+                    'Empresarial',
+                    'Outro'
+                ]
+            );
+            $table->decimal('saldoInicial', 10, 2);
             $table->timestamps();
         });
     }

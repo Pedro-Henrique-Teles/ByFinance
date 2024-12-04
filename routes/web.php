@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/financeiro', function() {
     return view('financeiro');
 });
+
+Route::get('/login', function() {
+    return view('telaLogin');
+});

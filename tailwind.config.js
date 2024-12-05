@@ -8,10 +8,15 @@ export default {
         './resources/**/*.blade.php',
         './resources/**/*.js',
         './resources/**/*.vue',
-        "./node_modules/flowbite/**/*.js"
     ],
     theme: {
         extend: {
+            colors: {
+                // Paleta de cores
+                'verde-primario': '#0c5646', 
+                'amarelo-primario': '#f2bc00',
+                'dark-primario': '#111827',
+            },  
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },

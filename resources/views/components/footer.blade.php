@@ -4,7 +4,7 @@
             <div class="flex justify-center items-center text-teal-600 dark:text-teal-300">
                 <!-- Ícone simplificado utilizando Font Awesome -->
                 <i class="fa-brands fa-bitcoin text-4xl"></i> <!-- ou outro ícone de gráfico -->
-                <span class="ml-2 text-xl font-bold text-4xl">ByFinance</span>
+                <span class="ml-2 font-bold text-4xl">ByFinance</span>
             </div>
             
 

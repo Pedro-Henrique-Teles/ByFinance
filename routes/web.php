@@ -11,12 +11,12 @@ Route::prefix('financeiro')->group(function(){
     
     //Redirecionamento caso o usuario tente entrar apenas na rota /financeiro
     Route::get('/', function(){
-        return redirect('financeiro/lancamentos');
+        return redirect()->route('financeiro/lancamentos');
     });
 
     Route::get('/lancamentos', function(){
         return view('Financeiro.lancamentos');
-    });
+    })->name('financeiro.lancamentos');
 
     //Adicionar outras rotas com o prefixo financeiro
 });

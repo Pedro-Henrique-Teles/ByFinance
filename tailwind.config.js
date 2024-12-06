@@ -10,13 +10,10 @@ export default {
         './resources/**/*.vue',
     ],
     theme: {
+        colors: {
+            escuro: '#111827'
+        },
         extend: {
-            colors: {
-                // Paleta de cores
-                'verde-primario': '#0c5646', 
-                'amarelo-primario': '#f2bc00',
-                'dark-primario': '#111827',
-            },  
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },

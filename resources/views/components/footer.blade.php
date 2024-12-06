@@ -6,7 +6,6 @@
                 <i class="fa-brands fa-bitcoin text-4xl"></i> <!-- ou outro ícone de gráfico -->
                 <span class="ml-2 font-bold text-4xl">ByFinance</span>
             </div>
-            
 
             <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 dark:text-gray-400">
                 Ajudamos você a manter o controle financeiro de forma simples e eficiente. Com soluções personalizadas e ferramentas de gestão, seu futuro financeiro está em boas mãos.

@@ -1,23 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-//Prefixo financeiro adicionado para as rotas
-Route::prefix('financeiro')->group(function(){
-    
-    //Redirecionamento caso o usuario tente entrar apenas na rota /financeiro
-    Route::get('/', function(){
-        return redirect()->route('financeiro/lancamentos');
-    });
+Route::get('/cadastro', [UserController::class, 'create'])->name('cadastro');
 
-    Route::get('/lancamentos', function(){
-        return view('Financeiro.lancamentos');
-    })->name('financeiro.lancamentos');
-
-    //Adicionar outras rotas com o prefixo financeiro
-});
-
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');

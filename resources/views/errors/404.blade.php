@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', '404 Page not found')
+@section('title', '404 Error')
 
 @section('content')
 

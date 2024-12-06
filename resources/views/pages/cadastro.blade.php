@@ -28,20 +28,20 @@
 
                         <form action="#" class="mt-8 grid grid-cols-6 gap-6">
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="Nome" class="block text-sm font-medium text-gray-700 dark:text-gray-200">
+                                <label for="FirstName" class="block text-sm font-medium text-gray-700 dark:text-gray-200">
                                     Nome
                                 </label>
 
-                                <input type="text" id="Nome" name="nome"
+                                <input type="text" id="FirstName" name="first_name"
                                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-black" />
                             </div>
 
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="Sobrenome" class="block text-sm font-medium text-gray-700 dark:text-gray-200">
+                                <label for="LastName" class="block text-sm font-medium text-gray-700 dark:text-gray-200">
                                     Sobrenome
                                 </label>
 
-                                <input type="text" id="Sobrenome" name="sobrenome"
+                                <input type="text" id="LastName" name="last_name"
                                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-black" />
                             </div>
 
@@ -55,21 +55,21 @@
                             </div>
 
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="Senha" class="block text-sm font-medium text-gray-700 dark:text-gray-200">
+                                <label for="Password" class="block text-sm font-medium text-gray-700 dark:text-gray-200">
                                     Senha
                                 </label>
 
-                                <input type="password" id="Senha" name="senha"
+                                <input type="password" id="Password" name="password"
                                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-black" />
                             </div>
 
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="ConfirmeSenha"
+                                <label for="PasswordConfirmation"
                                     class="block text-sm font-medium text-gray-700 dark:text-gray-200">
                                     Confirme Sua Senha
                                 </label>
 
-                                <input type="password" id="ConfirmeSenha" name="confirme_senha"
+                                <input type="password" id="PasswordConfirmation" name="password_confirmation"
                                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-black" />
                             </div>
                             <div class="col-span-6">

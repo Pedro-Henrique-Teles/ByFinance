@@ -12,13 +12,16 @@
 </head>
 
 <body>
-    {{-- Component NavBar Importado --}}
+    {{-- Navbar --}}
     @yield('navbar')
-    {{-- -------------------------- --}}
 
+    {{-- Conteúdo Principal --}}
+    <div class="pt-16"> 
+        @yield('content')
+    </div>
+
+    {{-- Footer --}}
     @yield('footer')
-    
-    @yield('content')
 </body>
 
 </html>

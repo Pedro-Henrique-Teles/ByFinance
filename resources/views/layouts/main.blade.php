@@ -16,9 +16,7 @@
     @yield('navbar')
 
     {{-- Conteúdo Principal --}}
-    <div class="pt-16"> 
-        @yield('content')
-    </div>
+    @yield('content')
 
     {{-- Footer --}}
     @yield('footer')

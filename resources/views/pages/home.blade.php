@@ -14,7 +14,7 @@
                     Administrando seu dinheiro da foma mais eficiente e segura.
                 </p>
                 <div class="flex gap-2">
-                    <a href="{{route('cadastro')}}" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-md">
+                    <a href="{{route('cadastro.create')}}" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-md">
                         Cadastre-Se
                     </a>
                     <a href="{{route('login')}}" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-md">
@@ -28,5 +28,9 @@
         </div>
     </div>
 </div>
+
+@section('footer')
+<x-footer />
+@endsection
 
 @endsection

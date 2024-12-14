@@ -1,14 +1,14 @@
 @extends('layouts.main')
-
 @section('title', 'Financeiro')
 
-@section('content')
-    @section('navbar')
-        <x-navbar />
-    @endsection
-    <h1>Página de Financeiro</h1>
+@section('navbar')
+    <x-navbar />
+@endsection
 
-
-
-
+    @section('content')
+    
+    <div class="mt-16"> <!-- Ajuste o espaçamento aqui -->
+        @include('components.messages.flashMessageSuccess')
+        <h1>Página de Financeiro</h1>
+    </div>
 @endsection

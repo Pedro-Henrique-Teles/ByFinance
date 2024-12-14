@@ -69,8 +69,12 @@
                                 tabindex="-1" id="user-menu-item-0">Seu Perfil</a>
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                 tabindex="-1" id="user-menu-item-1">Configurações</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                tabindex="-1" id="user-menu-item-2">Sair</a>
+                                <form action="{{ route('logout') }}" method="POST" class="inline">
+                                    @csrf
+                                    <button type="submit" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">
+                                        Sair
+                                    </button>
+                                </form>
                         </div>
                     </div>
                 </div>

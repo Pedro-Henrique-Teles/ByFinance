@@ -11,7 +11,8 @@ export default {
     ],
     theme: {
         colors: {
-            escuro: '#111827'
+            escuro: '#111827',
+            bgCinza: '#e0e0e0'
         },
         extend: {
             fontFamily: {

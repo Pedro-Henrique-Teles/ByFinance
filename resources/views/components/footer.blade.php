@@ -14,7 +14,7 @@
             <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
                 <li>
                     <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-                        href="#">
+                        href="https://teles.vercel.app/resume" target="_blank">
                         Sobre
                     </a>
                 </li>

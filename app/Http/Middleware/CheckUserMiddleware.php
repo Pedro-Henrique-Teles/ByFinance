@@ -15,8 +15,8 @@ class CheckUserMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if($request->user()){
-            return redirect('login');
+        if (!$request->user()) { // Se não houver usuário autenticado
+            return redirect('login'); // Redireciona para a página de login
         }
 
         $response = $next($request);

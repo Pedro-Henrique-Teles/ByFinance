@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class FinanceiroController extends Controller
 {
-    public function showFinanceiro(){
-        return view('pages.Financeiro.financeiro');
+    public function show()
+    {
+        $user = Auth::user();
+        $userName = $user->name;
+
+        return view('pages.Financeiro.financeiro', ['userName' => $userName]);
     }
 }

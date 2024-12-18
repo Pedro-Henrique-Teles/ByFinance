@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\Rules\Password;
-
 
 class AuthController extends Controller
 {
@@ -16,18 +14,14 @@ class AuthController extends Controller
 
     public function authUser(Request $request)
     {
-
-        $request->validate(
-            [
-                'email' => 'required|email|min:8',
-                'password' => 'required|min:5'
-            ]
-        );
+        $request->validate([
+            'email' => 'required|email|min:8',
+            'password' => 'required|min:5',
+        ]);
 
         $credenciais = $request->only('email', 'password');
 
-        if(auth()->attempt($credenciais, true)){
-
+        if (Auth::attempt($credenciais, true)) {
             return redirect()->route('financeiro')->with('success', 'Login realizado com sucesso');
         }
 
@@ -42,4 +36,6 @@ class AuthController extends Controller
 
         return redirect('login')->with('success', 'Sessão encerrada com sucesso');
     }
+
+    
 }

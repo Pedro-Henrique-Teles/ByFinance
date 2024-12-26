@@ -16,6 +16,9 @@
             <x-modalControl />
         </div>
 
+        <div class="absolute" style="top: 58px; right: 125px; display: flex; gap: 8px;">
+        <x-modalContas :bandeiras="$bandeiras" modal-id="cadastroContaModal" button-text="Cadastrar Conta" />
+    </div>
         <br>
         <h1>Olá {{$userName}}</h1>
 

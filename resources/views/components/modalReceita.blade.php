@@ -16,7 +16,7 @@
 
             <div class="mt-4">
                 <label for="valor" class="block text-sm font-medium text-gray-700">Valor</label>
-                <input type="text" id="valor" name="valor" class="mt-2 p-2 w-full border border-gray-300 rounded-md"
+                <input type="text" id="valor" name="valor" placeholder="R$ 0,00" class="mt-2 p-2 w-full border border-gray-300 rounded-md"
                        onkeydown="return event.keyCode === 8 || event.keyCode === 9 || event.keyCode === 46 || /^[0-9.,]$/.test(event.key)" />
             </div>
 

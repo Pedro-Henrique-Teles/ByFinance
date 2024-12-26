@@ -19,19 +19,30 @@
                 <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                     <div class="flex shrink-0 items-center">
                         <img class="h-8 w-auto"
-                            src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
+                            src="{{ asset('img/LogoByFinance.jpg') }}"
                             alt="Your Company">
                     </div>
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
-                            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                                aria-current="page">Lançamentos</a>
                             <a href="#"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Categorias</a>
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                                Lançamentos</a>
                             <a href="#"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Relatorios</a>
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                                Categorias
+                            </a>
                             <a href="#"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Cadastros</a>
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                                Relatorios
+                            </a>
+                            <a href="#"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                                Cadastros
+                            </a>
+                            <a href="#"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                                Testes
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -69,12 +80,13 @@
                                 tabindex="-1" id="user-menu-item-0">Seu Perfil</a>
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                 tabindex="-1" id="user-menu-item-1">Configurações</a>
-                                <form action="{{ route('logout') }}" method="POST" class="inline">
-                                    @csrf
-                                    <button type="submit" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">
-                                        Sair
-                                    </button>
-                                </form>
+                            <form action="{{ route('logout') }}" method="POST" class="inline">
+                                @csrf
+                                <button type="submit" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                    tabindex="-1">
+                                    Sair
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>

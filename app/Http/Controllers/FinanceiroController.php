@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
+use App\Models\Bandeira;
 
 class FinanceiroController extends Controller
 {
@@ -10,7 +11,11 @@ class FinanceiroController extends Controller
     {
         $user = Auth::user();
         $userName = $user->name;
+        $bandeiras = Bandeira::all();
 
-        return view('pages.Financeiro.financeiro', ['userName' => $userName]);
+        return view('pages.Financeiro.financeiro', [
+            'userName' => $userName,
+            'bandeiras' => $bandeiras
+        ]);
     }
 }

@@ -13,15 +13,8 @@ return new class extends Migration
     {
         Schema::create('categorias', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('nome', 20);
-            $table->enum(
-                'tipo',
-                [
-                    'receita',
-                    'despesa'
-                ]
-            );
+            $table->string('codigo', 10);
+            $table->string('nome');
             $table->timestamps();
         });
     }

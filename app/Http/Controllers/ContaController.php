@@ -16,15 +16,9 @@ class ContaController extends Controller
         return Bandeira::all();
     }
 
-    protected function getTiposDeConta()
-    {
-        return TipoDeConta::all();
-    }
-
     public function pageFinanceiro()
     {
         $bandeiras = $this->getBandeiras();
-        $tiposDeContas = $this->getTiposDeConta();
         return view('financeiro', compact('bandeiras','tiposDeContas'));
     }
 
@@ -40,7 +34,6 @@ class ContaController extends Controller
             'nome' => 'required|string|min:3|max:50',
             'banco' => 'required|exists:bandeiras,id',
             'saldoInicial' => 'required|numeric|min:0',
-            // 'tipo' => 'required|string|in:Corrente,Poupança,Salário,Conjunta,Universitaria,Empresarial,Outro'
         ]);
 
         // dd($validated); 
@@ -49,7 +42,6 @@ class ContaController extends Controller
             'nome' => $validated['nome'],
             'bandeira_id' => $validated['banco'],
             'saldoInicial' => $validated['saldoInicial'],
-            // 'tipo' => $validated['tipo'],
             'user_id' => Auth::id(),
         ]);
 

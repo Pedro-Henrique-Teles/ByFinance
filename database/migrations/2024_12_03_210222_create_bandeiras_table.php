@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('bandeiras', function (Blueprint $table) {
             $table->id();
-            $table->string('nome', 50)->unique();
+            $table->string('nome')->unique();
             $table->string('imagem')->nullable();
             $table->timestamps();
         });

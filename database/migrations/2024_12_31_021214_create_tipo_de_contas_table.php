@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('contas', function (Blueprint $table) {
-            $table->foreignId('bandeira_id')->constrained('bandeiras')->onDelete('cascade');
+        Schema::create('tipo_de_contas', function (Blueprint $table) {
+            $table->id();
+            $table->string('nome');
+            $table->timestamps();
+            
         });
     }
 
@@ -21,8 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('contas', function (Blueprint $table) {
-            $table->dropForeign(['bandeira_id']);
-            $table->dropColumn('bandeira_id');        });
+        Schema::dropIfExists('tipos_de_contas');
     }
 };

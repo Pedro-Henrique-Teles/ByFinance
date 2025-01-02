@@ -1,4 +1,4 @@
-@props(['bandeiras', 'tiposDeContas', 'modalId', 'buttonText'])
+@props(['bandeiras', 'modalId', 'buttonText'])
     <!-- Botão para abrir o modal -->
     <button onclick="toggleModal('{{ $modalId }}')"
         class="flex items-center justify-center w-10 h-10 text-blue-600 bg-white border border-blue-600 rounded-full focus:ring-opacity-50">

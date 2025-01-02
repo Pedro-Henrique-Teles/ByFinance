@@ -17,7 +17,7 @@
         </div>
 
         <div class="absolute" style="top: 58px; right: 125px; display: flex; gap: 8px;">
-            <x-modalContas :bandeiras="$bandeiras" :tiposDeContas="$tiposDeContas" modal-id="cadastroContaModal" button-text="Cadastrar Conta" />        <br>
+            <x-modalContas :bandeiras="$bandeiras" modal-id="cadastroContaModal" button-text="Cadastrar Conta" />        <br>
         <h1>Olá {{$userName}}</h1>
 
         <p>Adicione outros elementos aqui.</p>

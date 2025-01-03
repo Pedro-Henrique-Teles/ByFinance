@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use App\Models\Bandeira;
+use App\Models\TipoDeConta;
 
 class FinanceiroController extends Controller
 {
@@ -12,10 +13,12 @@ class FinanceiroController extends Controller
         $user = Auth::user();
         $userName = $user->name;
         $bandeiras = Bandeira::all();
+        $tiposDeContas = TipoDeConta::all();
 
         return view('pages.Financeiro.financeiro', [
             'userName' => $userName,
-            'bandeiras' => $bandeiras
+            'bandeiras' => $bandeiras,
+            'tiposDeContas' => $tiposDeContas
         ]);
     }
 }

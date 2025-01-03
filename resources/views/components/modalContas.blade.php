@@ -1,4 +1,4 @@
-@props(['bandeiras', 'modalId', 'buttonText'])
+@props(['bandeiras', 'tiposDeContas','modalId', 'buttonText'])
     <!-- Botão para abrir o modal -->
     <button onclick="toggleModal('{{ $modalId }}')"
         class="flex items-center justify-center w-10 h-10 text-blue-600 bg-white border border-blue-600 rounded-full focus:ring-opacity-50">
@@ -69,8 +69,12 @@
                             class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                             <option value="" disabled selected>Selecione o tipo de conta</option>
                             
-                            <option value="Conta Corrente">Corrente</option>
-                            
+                            @foreach ($tiposDeContas as $tipoDeConta)
+                            <option value="{{ $tipoDeConta->id }}">
+                                {{ $tipoDeConta->nome }}
+                            </option>
+                                
+                            @endforeach
                    
                         </select>
                     </div>

@@ -6,7 +6,13 @@ use App\Http\Controllers\FinanceiroController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 
+// Rota Home, pág inicial
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// Rota de Testes
+
+Route::get('/teste-dd', [ContaController::class, 'pageFinanceiro']);
+
 
 // Rotas de Cadastro de Usuário
 Route::get('/cadastro', [UserController::class, 'create'])->name('cadastro.create'); // GET para exibir o formulário
